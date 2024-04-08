@@ -13,6 +13,7 @@ private:
     list<string> menos_jugados;
 
 public:
+//sets y gets
     void mas_jugados(list<string> j)
     {
         this->mas_jugados = j;
@@ -35,6 +36,8 @@ public:
     // {
 
     // }
+
+//funciones
     void juegos_fab()
     {
 
@@ -58,11 +61,15 @@ public:
         cin >> opcion;
         switch (opcion)
         {
-        case 1:
+        case 1: // a medida que escojan ese juego su punyaje va subiendo, si  el punbtaje es mayor a 3, meter a mas jugados si no, meter a menos juigados
             mario++;
             if (mario >= 3)
             {
                 mario.pushback(mas_jugados);
+            }
+            else
+            {
+                mario.pushback(menos_jugados);
             }
             break;
         case 2:
@@ -70,6 +77,10 @@ public:
             if (triqui >= 3)
             {
                 triqui.pushback(mas_jugados);
+            }
+            else
+            {
+                triqui.pushback(menos_jugados);
             }
 
             break;
@@ -79,6 +90,10 @@ public:
             {
                 piedra_papel_tijera.pushback(mas_jugados);
             }
+            else
+            {
+                piedra_papel_tijera.pushback(menos_jugados);
+            }
 
             break;
         case 4:
@@ -86,6 +101,10 @@ public:
             if (picas_ficas >= 3)
             {
                 picas_ficas.pushback(mas_jugados);
+            }
+            else
+            {
+                picas_ficas.pushback(menos_jugados);
             }
             break;
 
